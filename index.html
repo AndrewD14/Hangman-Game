@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en-us">
+	<head>
+		<title>Hangman</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<link rel = "stylesheet" type = "text/css" href = "assets/css/reset.css" />
+		<link rel = "stylesheet" type = "text/css" href = "assets/css/style.css" />
+
+		<script type= "text/javascript" src= "assets/js/game-elements.js"></script>
+		<script type= "text/javascript" src= "assets/js/game-object.js"></script>
+		<script type= "text/javascript" src= "assets/js/game.js"></script>
+	</head>
+	<body>
+		<header>
+			<div>Main Logo</div>
+			<div>Second logo</div>
+		</header>
+		<section class="results clearfix">
+			<div class="label">Wins:</div>
+			<div id="wins"></div>
+			<div class="label">Played:</div>
+			<div id="played"></div>
+			<div id="poster"></div>
+			<audio></audio>
+		</section>
+		<section class="game clearfix">
+			<div class="label">Remaining Number of Guesses:</div>
+			<div id="remainingLives"></div>
+			<div>Current Title to Guess</div>
+			<div id="words" class="words clearfix"></div>
+			<div id="guessed"></div>
+			<button id="btn-hint" onclick="grabHint()">Hint</button>
+			<div class="hint" id="hint"></div>
+		</section>
+
+		<script type="text/javascript">
+			function load(){
+				start();
+				document.getElementById("wins").innerHTML = win;
+				
+
+				document.onkeyup = checkKey;
+			}
+
+			window.onload = load;
+		</script>
+	</body>
+</html
