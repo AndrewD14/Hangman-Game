@@ -53,6 +53,7 @@ function start(){
 
 	//resets the info results
 	document.getElementById("results").innerHTML = "";
+	document.getElementById("results").style.color = "red";
 }
 
 //updates the html page with the recent guess
