@@ -6,6 +6,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 		<link rel = "stylesheet" type = "text/css" href = "assets/css/reset.css" />
+		<link href="https://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet">
 		<link rel = "stylesheet" type = "text/css" href = "assets/css/style.css" />
 
 		<script type= "text/javascript" src= "assets/js/game-elements.js"></script>
@@ -14,26 +15,40 @@
 	</head>
 	<body>
 		<header>
-			<div>Main Logo</div>
-			<div>Second logo</div>
+			<div id="logo">
+				<img src="assets/images/Logo.png" />
+			</div>
 		</header>
-		<section class="results clearfix">
-			<div class="label">Wins:</div>
-			<div id="wins"></div>
-			<div class="label">Played:</div>
-			<div id="played"></div>
-			<div id="poster"></div>
-			<audio></audio>
-		</section>
-		<section class="game clearfix">
-			<div class="label">Remaining Number of Guesses:</div>
-			<div id="remainingLives"></div>
-			<div>Current Title to Guess</div>
-			<div id="words" class="words clearfix"></div>
-			<div id="guessed"></div>
-			<button id="btn-hint" onclick="grabHint()">Hint</button>
-			<div class="hint" id="hint"></div>
-		</section>
+		
+		<div class="content">
+			<div id="directions">
+				<div class="label">Directions:</div>
+				<p>Press a key on the keybord to play. Try to figure out the title of the movie.</p>
+				<p> If you need a hint, press the Hint button, but it will cost 1 guess. If you have less than 2 guesses remaining, the hint button will be disabled.</p>
+			</div>
+			<section class="results clearfix">
+				<button id="btn-again" onclick="start()">Play Again</button>
+				<div class="label">Wins:</div>
+				<div id="wins"></div>
+				<div class="label">Played:</div>
+				<div id="played"></div>
+				<div id="poster" class="parent-center clearfix"></div>
+			</section>
+			<section class="game clearfix">
+				<div class="label">Remaining Number of Guesses:</div>
+				<div id="remainingLives"></div>
+				<div id="main-title">Current Title to Guess</div>
+				<div class="parent-center">
+					<div id="words" class="words"></div>
+				</div>
+				<div class="label">Already guessed:</div>
+				<div id="guessed" class="guessed clearfix"></div>
+				<button id="btn-hint" onclick="grabHint()">Hint</button>
+				<div class="label">Hint:</div>
+				<div class="hint clearfix" id="hint"></div>
+				<div id="results" class="result"></div>
+			</section>
+		</div>
 
 		<script type="text/javascript">
 			function load(){

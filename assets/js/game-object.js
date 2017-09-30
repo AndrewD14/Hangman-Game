@@ -3,17 +3,15 @@ var currentGame = {
 	currentAnswer: [],
 	currentReveal: [],
 	hints: [],
-	sound: "",
 	picture: "",
 
 	//object initializer
 	populate: function(selected){
 		//resets the variables
-		currentAnswer = [];
-		currentReveal = [];
-		hints = [];
-		sound = "";
-		picture = "";
+		this.currentAnswer = [];
+		this.currentReveal = [];
+		this.hints = [];
+		this.picture = "";
 
 		//splits the string into separate parts
 		var temp = selected.answer.split(" ");
@@ -112,11 +110,6 @@ var currentGame = {
 	//grabs a random hint
 	getHint: function(){
 		return this.hints[Math.floor(Math.random() * this.hints.length)];
-	},
-
-	//grabs the path to the sound file
-	getSound: function(){
-		return this.sound;
 	},
 
 	//grabs the path to the picture file
