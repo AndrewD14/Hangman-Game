@@ -113,7 +113,7 @@ var currentGame = {
 	},
 
 	//grabs the path to the picture file
-	getSound: function(){
+	getPoster: function(){
 		return this.picture;
 	}
 }

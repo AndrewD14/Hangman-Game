@@ -125,7 +125,7 @@ function checkKey(event){
 
 					//reveals the poster
 					var newImg = document.createElement("img");
-					newImg.src = currentGame.picture;
+					newImg.src = currentGame.getPoster();
 
 					document.getElementById("poster").append(newImg);
 				}
