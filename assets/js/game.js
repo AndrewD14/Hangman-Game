@@ -71,7 +71,7 @@ function grabHint(){
 	element.innerHTML = currentGame.getHint();
 
 	//cost 2 lives
-	guessRemaining = guessRemaining - 2;
+	guessRemaining = guessRemaining - 1;
 	document.getElementById("remainingLives").innerHTML = guessRemaining;
 
 	//disables the hint button
